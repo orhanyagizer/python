@@ -1,28 +1,33 @@
-number = input("Please enter a positive number: ")
-basamak_sayısı = len(number)
+number = input("Please enter a number: ")
+sum = 0
+while not number.isdecimal():
+    print("It is an invalid entry. Don't use non-numeric, float, or negative values!")
+    number = input("Please enter a number: ")
+if number.isdecimal():
+    for i in range(len(number)):
+         sum += int(number[i])**len(number)
+    if  sum == int(number):
+         print("{} is an Armstrong number".format(int(number)))
+    else:
+        print("{} is not an Armstrong number".format(int(number)))
 
-number = int(number)
 
-basamak = 0
-toplam = 0
 
-gecici_number = number
 
-while gecici_number > 0:
-    basamak = gecici_number % 10 
-    toplam += basamak ** basamak_sayısı
-    
-    gecici_number //= 10  
-     
-if (toplam == number):
-   print(f"{number} is an armstrong number.")     
+"""number = input("Please enter a positive number: ")
+sum = 0
 
-else:
-   if (number <= 0):
-      print("Please enter a positive number.")   
-   elif number == type(str):
-      print("Dont use any entries ")
+while not number.isdecimal():
+   print("It is an invalid entry. Dont use non-numeric,float or negative values.")
+   number = input("Please enter a positive number:")
    
-   elif number == float(number):
-      print("Please enter an integer number.")                
-                   
+
+if number.isdecimal():
+   for i in range(len(number)):
+      sum += int(number[i])**len(number)
+      if sum == int(number):
+         print(f"{(int(number))} is a Armstrong number.")
+      else:
+         print(f"{(int(number))} is not an Armstrong number.")    """  
+      
+
